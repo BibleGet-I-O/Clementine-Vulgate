@@ -1,0 +1,115 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[sc]{mathpazo}
+\usepackage{graphicx}
+\usepackage[latin]{babel}
+\usepackage{fancyhdr} \pagestyle{fancy}
+\usepackage{needspace}
+\usepackage{lettrine}
+\usepackage[sc]{titlesec}
+
+\newcommand{\versal}[1]{\vspace{6pt}\lettrine{#1}{}}
+\newcommand{\clrdouble}{\clearpage{\pagestyle{empty}\cleardoublepage}}
+
+\makeatletter
+\DeclareMathSizes{\@xpt}{\@xpt}{6}{5}
+\renewcommand{\section}{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\normalfont\Large\scshape}}
+\makeatother
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\sloppy
+\pagenumbering{roman}
+\setcounter{page}{2}\thispagestyle{empty}
+\mbox{}\vspace{1in}
+
+\noindent The Bishops' Conference of England and Wales gives its
+approval to the publication of \emph{Biblia Sacra juxta Vulgatam
+Clementinam}.\\
+  \mbox{}\\
+  \textbf{Published with approbation.\\ CBCEW, 9th January 2006.}
+%\begin{center}\includegraphics{titlea4}\end{center}\thispagestyle{empty}%
+\clrdouble
+\input{Front}\clrdouble
+\pagenumbering{arabic}\setcounter{page}{1}\widowpenalty=10000
+\input{Gn}\clrdouble
+\input{Ex}\clrdouble
+\input{Lv}\clrdouble
+\input{Nm}\clrdouble
+\input{Dt}\clrdouble
+\input{Jos}\clrdouble
+\input{Jdc}\clrdouble
+\input{Rt}\clrdouble
+\input{1Rg}\clrdouble
+\input{2Rg}\clrdouble
+\input{3Rg}\clrdouble
+\input{4Rg}\clrdouble
+\input{1Par}\clrdouble
+\input{2Par}\clrdouble
+\input{Esr}\clrdouble
+\input{Neh}\clrdouble
+\input{Tob}\clrdouble
+\input{Jdt}\clrdouble
+\input{Est}\clrdouble
+\input{Job}\clrdouble
+\input{Ps}\clrdouble
+\input{Pr}\clrdouble
+\input{Ecl}\clrdouble
+\input{Ct}\clrdouble
+\input{Sap}\clrdouble
+\input{Sir}\clrdouble
+\input{Is}\clrdouble
+\input{Jr}\clrdouble
+\input{Lam}\clrdouble
+\input{Bar}\clrdouble
+\input{Ez}\clrdouble
+\input{Dn}\clrdouble
+\input{Os}\clrdouble
+\input{Joel}\clrdouble
+\input{Am}\clrdouble
+\input{Abd}\clrdouble
+\input{Jon}\clrdouble
+\input{Mch}\clrdouble
+\input{Nah}\clrdouble
+\input{Hab}\clrdouble
+\input{Soph}\clrdouble
+\input{Agg}\clrdouble
+\input{Zach}\clrdouble
+\input{Mal}\clrdouble
+\input{1Mcc}\clrdouble
+\input{2Mcc}\clrdouble
+\addtocontents{toc}{\vspace{24pt}\textsc{Novum Testamentum}}
+\addtocontents{toc}{\vspace{12pt}}
+
+\input{Mt}\clrdouble
+\input{Mc}\clrdouble
+\input{Lc}\clrdouble
+\input{Jo}\clrdouble
+\input{Act}\clrdouble
+\input{Rom}\clrdouble
+\input{1Cor}\clrdouble
+\input{2Cor}\clrdouble
+\input{Gal}\clrdouble
+\input{Eph}\clrdouble
+\input{Phlp}\clrdouble
+\input{Col}\clrdouble
+\input{1Thes}\clrdouble
+\input{2Thes}\clrdouble
+\input{1Tim}\clrdouble
+\input{2Tim}\clrdouble
+\input{Tit}\clrdouble
+\input{Phlm}\clrdouble
+\input{Hbr}\clrdouble
+\input{Jac}\clrdouble
+\input{1Ptr}\clrdouble
+\input{2Ptr}\clrdouble
+\input{1Jo}\clrdouble
+\input{2Jo}\clrdouble
+\input{3Jo}\clrdouble
+\input{Jud}\clrdouble
+\input{Apc}\clrdouble
+\end{document}

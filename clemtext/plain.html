@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>The Clementine Vulgate - plain text</title>
+    <link rel="stylesheet" type="text/css" href="newstyle.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="alternate" type="application/rss+xml" title="Clementine text updates" href="clemtext.rss" />
+    <link rel="start" title="Clementine text project" href="gettext.html" />
+    <meta name="author" content="little dot mouth at soon dot com" />
+    <meta name="keywords" content="vulgate bible jerome clementine catholic tridentine traditional vulsearch" />
+    <meta name="description" content="Marked-up plain text of the Clementine Vulgate for downloading and
+    further processing." />
+  </head>
+  <body>
+    <div id="root">
+      <div id="masthead">
+        <a href="index.html"><img src="vs.png" alt="Clementine text project" /></a>
+        <h1>VulSearch &amp; the Clementine Vulgate project</h1>
+      </div>
+      <div id="navbar">
+        <h2>Contents</h2>
+        <ul>
+          <li>
+          <a href="index.html">VulSearch</a>
+          </li>
+          <li>
+          <a href="gettext.html">Clementine text project</a>
+          <ul>
+            <li><a href="html/index.html">HTML</a></li>
+            <li><a href="pdf.html">PDF</a></li>
+            <li><span class="active">Plain text source</span></li>
+          </ul>
+          </li>
+          <li>
+          <a href="text.html">Text FAQ</a>
+          </li>
+          <li>
+          <a href="cgi-bin/vulsearch">Search the text online</a>
+          </li>
+          <li>
+          <a href="history.html">A history of the project</a>
+          </li>
+          <li>
+          <a href="technical.html">Behind the scenes</a>
+          </li>
+          <li>
+          <a href="links.html">Links</a>
+          </li>
+          <li>
+          <a href="contact.html">Contact me</a>
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+
+        <h2>
+          <span id="updated">Last updated: 2/9/06</span>
+          The Clementine Vulgate: plain text
+        </h2>
+
+	<h3>Introduction</h3>
+	<p>This page is for those who want to convert the text of the Clementine
+	Vulgate into a format of their choosing. You can also <a
+	  href="gettext.html">view the text online</a>, <a
+	  href="cgi-bin/vulsearch">search it</a> and <a href="pdf.html">print
+	  it</a> at this site. This document describes the mark-up used, and
+	provides copies of the source files together with some sample conversion
+	scripts.</p>
+
+	<h3>Download</h3>
+	<p>You most probably want the latest source files and sample scripts:</p>
+	<div class="pcent" style="margin-bottom: 6pt;"><a href="latest.zip">Download the
+	    latest source file (2/9/06)</a> (1.6&nbsp;Mb)</div>
+	<p>However, you can also recreate the text as it stood at any time since
+	its release: if you want to do this, you will find instructions <a
+	  href="README-patch.txt">here</a> and checksums <a
+	  href="checksums.html">here</a>.</p>
+	<p>All of the scripts are released under the <a
+	  href="http://www.opensource.org/licenses/gpl-license.html">GPL</a>,
+	and can be run using free software (see the Tools section below for
+	download links).</p>
+
+	<h3>Description of the markup</h3>
+	<p>The text is plain text, codepage 1252, with DOS-style line endings.
+	Commas and periods have no space before, and a single space after
+	(unless they end a line&mdash;there is never a space at the end of a
+	verse), whereas <code>: ; ? !</code> each have a single space before, and a single
+	space after (unless they end a line). In general, the first word of a
+	verse is not capitalized, nor the first word of a line of poetry, but
+	the first word of a sentence, as well as the first word of direct speech
+	or quotation, is capitalized.</p>
+
+	<p>The text really has two structures: the traditional division
+	into books, chapters and verses, and a 'natural' structure as sentences
+	and paragraphs. This latter structure is not an intrinsic part of the
+	text, and has been imposed differently by each editor of the Vulgate
+	through the centuries; for my part I have tried to use punctuation both
+	to make the meaning transparent, and to reflect the natural
+	cadences in the text.</p>
+	<ul>
+	  <li>Paragraph divisions are indicated by a backslash <code>\</code>, though this is
+	  omitted at the very start or end of a chapter. This is followed by a
+	  space if it should occur in the middle of a verse.</li>
+	  <li>When text is set as verse, the start and end of a section of verse are
+	  indicated by brackets <code>[</code> (preceded by a space) and
+	  <code>]</code> (followed by a space unless it end
+	  the verse) respectively. Line breaks within the verse are indicated by
+	  a slash <code>/</code> (followed by a space unless it end the verse).</li>
+	  <li>When different speakers are indicated (e.g.&nbsp;in the
+	  Lamentations), the speaker's name is placed between angle brackets
+	  <code>&lt;&hellip;&gt;</code>, with no space after the closing bracket.</li>
+	  <li>Lamentations and Ecclesiasticus have prologues (which I believe
+	  are non-canonical?). In the source,
+	  this appears at the start of 1:1, though logically it belongs before
+	  the start of ch.&nbsp;1. The prologue is preceded by
+	  <code>&lt;Prologus&gt;</code> and in both books the text of
+	  verse&nbsp;1 begins at the first bracket <code>[</code>.</li>
+	  <li>Information on the creators and proof-readers of each book can be
+	  found in <code>source/data.txt</code>; a description of the format of
+	  this file appears at its head.</li>
+	</ul>
+
+	<h3>The example scripts</h3>
+	<p>Included with the source files are some example scripts, which I hope
+	might be helpful models for anyone who wants to convert the text into
+	another format&mdash;these are the scripts used to produce the HTML and PDF
+	versions of the text available on this site. I hope the scripts
+	themselves are well enough commented: below is a description.</p>
+
+	<h4>makehtml</h4>
+	<p>This consists of two scripts:</p>
+	<ul>
+	  <li>A sed script that does the meat of the work: it converts the
+	  source files to the body of a valid XHTML document. It should be an
+	  easy matter to modify this script to produce XML with whatever tags
+	  you want.</li>
+	  <li>A perl wrapper round the sed script that adds a header and footer
+	  and so on, in order to make a valid complete XHTML document.</li>
+	</ul>
+	<p>To generate the HTML, ensure that perl and sed are in your path, open
+	a shell or command window at the <code>clemtext</code> directory, and
+	type <code>perl&nbsp;makehtml.pl</code> (the output is placed in the
+	<code>html</code> directory).</p>
+	
+	<h4>makelatex</h4>
+	<p>Once again, a sed script does all the work, and a perl wrapper cleans
+	things up. There are also two batch files (which are also valid shell
+	scripts) to generate two different PDF files from the LaTeX source, one
+	("vulgate") A4 paper with wide margins; the other ("twocolumn"), letter
+	paper (8.5 x 11") in two columns. To make everything, ensure that perl,
+	sed, and pdflatex are in your path, open a shell or command window at
+	the <code>clemtext</code> directory and type
+	<code>perl&nbsp;makelatex.pl</code>, then
+	<code>makepdf-vulgate.bat</code>, then
+	<code>makepdf-twocolumn.bat</code> (the output is placed in the
+	<code>latex</code> directory).</p>
+
+
+
+	<h3>Tools</h3>
+	<p>The tools needed to run the scripts described here are a standard
+	part of any Linux distribution. Here is a list of sites where Windows
+	users can download them freely.</p>
+	<ul>
+	  <li><a
+	    href="http://gnuwin32.sourceforge.net/downlinks/sed.php">Sed</a></li>
+	  <li><a
+	    href="http://www.activestate.com/Products/Download/Download.plex?id=ActivePerl">Perl</a></li>
+	  <li><a href="http://www.miktex.org/setup.html">LaTeX</a> (only
+	  required to generate PDFs). You will also need some packages, which
+	  can be obtained from <a href="http://www.tex.ac.uk">CTAN</a>, though
+	  MikTeX has an install-on-demand feature, which means you shouldn't need to
+	  download them manually.</li>
+	</ul>
+
+
+        <p class="clearer"></p>
+
+          <div id="footer">
+            <div class="centered">
+              <div class="leftfloat">
+                <a
+                  href="http://sourceforge.net"><img style="border: 0;"
+                  src="http://sourceforge.net/sflogo.php?group_id=53472&amp;type=1"
+                  alt="SourceForge.net" id="sf" /></a><br />
+                <a
+                  href="http://www.digits.com"><img src=
+                  "http://counter.digits.com/wc/-r/-f/000000/-b/ffffff/-d/6/ClementinePlain"
+                  alt="(Counter)" style="border: 0;" /></a>
+              </div>
+              <div class="rightfloat">
+                <a
+                  href="http://validator.w3.org/check?uri=referer"><img
+                  style="border: 0;"
+                  src="valid-xhtml10.png" alt="Valid XHTML 1.0!" /></a>
+              </div>  
+              <div class="centered">
+                You can email me at<br /><span class="strong">little.mouth@soon.com</span>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  <!--#exec cgi="/cgi-bin/count"-->
+</body>
+</html>

@@ -1,0 +1,132 @@
+html, body { margin: 0; padding: 0; height: 100%; }
+body { font-family: sans-serif; color: #000; }
+
+#root { position: relative; margin: 0; height: 100%; }
+
+/* Masthead */
+#masthead { position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 34px; }
+#masthead img { border: none; }
+#logo img { position: absolute; z-index: 1; top: 2px; left: 2px; }
+#pics { position: absolute; z-index: 2; right: 0; }
+h1 { position: absolute; z-index: 3; left: 64px; top: 0; line-height: 34px; margin: 0; font-size: 18px; height: 34px; overflow: hidden; }
+
+/* Navigation bar */
+#navbar { position: absolute; top: 34px; left: 0; width: 200px; min-height: 100%; }
+#navbar h2 { font-size: 100%; margin: 0; padding: 2px; text-align: center; }
+#navbar li { margin: 0; padding: 0; }
+#navbar span.active, #navbar a { display: block; margin: 0; padding: 3px 6px 3px 4px; width: 190px; text-decoration: none; color: #000; }
+#navbar span.active { font-weight: bold; }
+#navbar ul { margin: 0; padding: 0; list-style-type: none; }
+#navbar ul ul span.active, #navbar ul ul a { padding: 2px 6px 2px 12px; width: 182px; }
+#navbar ul ul ul span.active, #navbar ul ul ul a { padding: 2px 6px 2px 20px; width: 174px; }
+#navbar { border-right: solid #669 1px; }
+#navbar h2 { background: #669; color: #FFF; }
+#navbar ul li { border-bottom: dotted #669 thin; }
+#navbar ul ul li { border-bottom: none; }
+#navbar span.active, #navbar a:hover, #navbar a:focus { background: #CCF; }
+#navbar a:active { background: #669; color: #FFF; }
+
+/* Content */
+#content { position: absolute; top: 34px; left: 200px; right: 0; padding: 0.4em 0.5em; }
+#content.full { left: 0; }
+h2:first-child, h3:first-child, h4:first-child { margin-top: 0; }
+
+#content { border-left: solid #669 1px; }
+#content.full { border-left: none; }
+
+#updated { position: absolute; z-index: 2; right: 0; bottom: 0; color: red; font-size: 50%; }
+
+/* Footer */
+#footer { margin-top: 2em; text-align: center; clear: both; font-size: 80%;}
+#footmail {  display: block; margin-left: auto; margin-right: auto; position: absolute; top: 1em; }
+
+/* Basic Elements */
+.standout { font-size: 120%; font-weight: bold;}
+.strong { font-weight: bold; }
+.em { font-style: italic; }
+
+/* Links */
+#content a[href] { text-decoration: none; }
+#content a[href] img { border-style: none; }
+#content a[href] img.bordered { border-style: solid; }
+
+#content a:link { color: #00A; text-decoration: none;}
+#content a:visited { color: #639; text-decoration: none;}
+#content a[href]:hover, #content a[href]:focus { color: #06F; text-decoration: none;}
+#content a:active { color: #669; text-decoration: none;}
+
+
+
+/* Headers */
+h1 { font-weight: bold; color: #669; } /* h1 font-size specified in base */
+h2 { position: relative; font-size: 160%; font-weight: bold; margin: 1.4em 0 0.7em 0; }
+h3 { position: relative; font-size: 120%; font-weight: normal; margin: 1.4em 0 0.7em 0; }
+h4, h5 { font-size: 100%; font-weight: bold; margin: 1.4em 0 0.7em 0; }
+
+#content h2 { color: #669; border-bottom: solid #669 1px; }
+#content h3 { color: #669; border-bottom: solid #CCF 1px; }
+
+#content.full h2 { text-align: center; }
+
+/* Alignment */
+.centered { display: block; margin-left: auto; margin-right: auto; }
+.leftfloat { float: left; margin-right: 0.5em; margin-bottom: 0.5em; position: relative; z-index: 10; }
+.rightfloat { float: right; margin-left: 0.5em; margin-bottom: 0.5em; position: relative; z-index: 10; }
+.clearer { clear: both; }
+span.clearer { display: block; }
+p.clearer { margin: 0; min-height: 1px; }
+.centering { text-align: center; }
+
+.xml { display: block; width: 36px; position: absolute; right: 0; top: 0; bottom: 0; }
+
+
+/* Misc */
+span.caption { color: #333; }
+#content img.bordered { border-style: solid; border-width: 1px; }
+a.important { font-weight: bold; }
+div.note { background: #FFC; border: solid #669 1px; padding: 0.3em; }
+
+/* Tables */
+table
+{
+  border: gray 0px solid;
+  border-spacing: 1px;
+  background-color: gray;
+  color: inherit;
+  margin-top: 1em;
+  margin-bottom: 3ex;
+}
+
+td
+{
+  padding-right: 12px;
+  padding-left: 6px;
+  background-color: #fff;
+  vertical-align: top;
+  color: #000;
+  text-align: right;
+}
+
+td.bookname
+{
+  font-weight: bold;
+  text-align: left;
+  color: #669;
+}
+
+td.total
+{
+  font-weight: bold;
+}
+
+th
+{
+  font-weight: normal;
+  text-align: left;
+  padding-left: 6px; 
+  background-color: #669;
+  color: #fff;
+} 
+
+/* Lists */
+ul.plain { list-style-type: none; margin-left: 0; padding-left: 0;}
