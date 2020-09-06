@@ -8,7 +8,7 @@ CONVERT=" iconv  -f   $FROM_ENCODING  -t   $TO_ENCODING"
 mkdir ../src/iso-encoded
 
 #loop to convert multiple files 
-for  file  in  ../src/*.lat; do
+for file in ../src/*.lat; do
 	isutf8 -q ${file} > /dev/null
 	OUT=$?
 	if [ $OUT -eq 1 ];then
